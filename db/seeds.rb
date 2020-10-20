@@ -1,8 +1,8 @@
 User.destroy_all
-u1 = User.create :email => 'giti1365@yahoo.com'
-u2 = User.create :email => 'giti.mafakheri@yahoo.com'
-u3 = User.create :email => 'giti13651@yahoo.com'
-u4 = User.create :email => 'giti.mafakheri1@yahoo.com'
+u1 = User.create :email => 'giti1365@yahoo.com' , :password => '123'
+u2 = User.create :email => 'giti.mafakheri@yahoo.com', :password => '123'
+u3 = User.create :email => 'giti13651@yahoo.com', :password => '123'
+u4 = User.create :email => 'giti.mafakheri1@yahoo.com', :password => '123'
 puts "#{ User.count } users."
 
 
