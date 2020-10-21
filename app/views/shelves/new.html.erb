@@ -1,0 +1,6 @@
+<h1>new shelf</h1>
+<%= form_for @shelf do |sh| %>
+<%= sh.label:title %>
+<%= sh.text_field :title, :placeholder => 'Shelf name' %>
+<%= sh.submit %>
+<% end %>
