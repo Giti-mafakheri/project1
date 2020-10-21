@@ -8,6 +8,9 @@ class ShelvesController < ApplicationController
    @current_user.shelves << shelf
    redirect_to root_path
  end
+ def index
+
+ end
  private
  def shelf_params
    params.require(:shelf).permit(:title)

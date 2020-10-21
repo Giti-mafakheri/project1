@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-
-  get 'shelves/new'
+  get 'reading_statuses/new'
+  get 'authors/new'
+  get 'genres/new'
  root :to => 'pages#home'
   resources :users , :only => [:new, :create, :index]
 
@@ -10,5 +11,9 @@ post '/login' => 'session#create'
 delete '/login' => 'session#destroy'
 
 resources :shelves , :except =>[:delete]
+resources :books
+resources :reading_statuses
+resources :authors
+resources :genres
 
 end

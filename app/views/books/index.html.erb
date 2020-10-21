@@ -1,0 +1,8 @@
+<h2>All Books</h2>
+<% @book.each do |b| %>
+<p><%= b.title %>
+  <span>--</span>
+  <%= link_to "delete",  method: :delete %></p>
+
+
+<% end  %>

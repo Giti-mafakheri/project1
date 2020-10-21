@@ -1,0 +1,10 @@
+<h1>Creating Book</h1>
+
+
+
+
+<%= form_for @book do |b| %>
+<%= b.label:title %>
+<%= b.text_field :title, :placeholder => 'Book Name' %>
+<%= b.submit "create book" %>
+<% end %>
