@@ -10,7 +10,16 @@ class ShelvesController < ApplicationController
  end
  def index
   @books = Book.all
+
  end
+
+
+def create_book
+  @shelf = @current_user.shelves
+  @shelf.books.destroy_all
+end
+
+
  private
  def shelf_params
    params.require(:shelf).permit(:title)

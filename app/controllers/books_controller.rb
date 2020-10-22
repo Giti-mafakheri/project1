@@ -7,13 +7,11 @@ class BooksController < ApplicationController
     book = Book.create book_params
     redirect_to books_path
   end
-  def destroy
-  # Book.find(params[:title]).destroy
-  # flash[:success] = "User destroyed."
-  # redirect_to books_path
-  raise hell
+
+  def edit
+    @book = Book.find :id => params[:id]
   end
-  
+
   def index
     @book = Book.all
   end

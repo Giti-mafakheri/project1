@@ -2,14 +2,22 @@
 <div class="p-3 mb-2 bg-light text-dark">
   <h1>Creating Book</h1>
   <%= form_for @book do |b| %>
-  <%= b.label:title %>
-  <%= b.text_field :title, :placeholder => 'Book Name' %>
 
+
+  <div class="form-group">
+    <%= b.label:title %>
+    <%= b.text_field :title, :placeholder => 'Book Name' %>
+  </div>
+
+
+  <div class="form-group">
   <%= b.label:Genre %>
   <%= b.select :genre_id,Genre.pluck(:name , :id),{}, :include_blank => true %>
+  </div>
 
 
-  <%= b.submit "create book", :class =>"badge badge-pill badge-primary" %>
+
+  <%= b.submit "create book"%>
   <% end %>
 
 
