@@ -1,10 +1,17 @@
-<h2>Your Shelves</h2>
+
+<div class="p-3 mb-2 bg-light text-dark">
+  <h2>Your Shelf</h2>
 
 
-<% @current_user.shelves.each do |shelf| %>
-<p><%= shelf.title %></p>
-<% @books.each do |book| %>
-<p><%= book.title %></p>
+  <% @current_user.shelves.each do |shelf| %>
+  <p><%= shelf.title %></p>
+  <% @books.each do |book| %>
+  <p><%= link_to book.title  %></p>
 
-<% end  %>
-<% end  %>
+  <% end  %>
+  <% end %>
+
+
+
+  <%= link_to "Add a book to your list" , new_book_path, :class =>"badge badge-pill badge-primary" %>
+</div>

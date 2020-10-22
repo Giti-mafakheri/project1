@@ -1,8 +1,11 @@
-<h2>All Books</h2>
-<% @book.each do |b| %>
-<p><%= b.title %>
-  <span>--</span>
-  <%= link_to "delete",  method: :delete %></p>
 
+<div class="p-3 mb-2 bg-light text-dark">
+  <h2>All Books</h2>
+  <% @book.each do |b| %>
+  <p><%=link_to b.title  %>
+    <span>--</span>
+    <%= link_to "delete",  method: :delete %></p>
+  <% end  %>
 
-<% end  %>
+  <%= link_to "Add New Book" , new_book_path, :class =>"badge badge-pill badge-primary" %>
+</div>

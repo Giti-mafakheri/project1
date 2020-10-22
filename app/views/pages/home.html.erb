@@ -1,25 +1,18 @@
 
-<% if @current_user.present? %>
-<p>you are currently loged in as <%= @current_user.email %></p>
-<% end %>
-<h1>Welcome to Book Club!</h1>
-<div class="row">
-  <div class="col-md-4">
-      <h1>first</h1>
-  </div>
 
-  <div class="col-md-4">
-      <h4>second</h4>
-  </div>
 
-  <div class="col-md-4">
-      <h1>third</h1>
-  </div>
+<div class="p-3 mb-2 bg-light text-dark">
+  <% if @current_user.present? %>
+  <p>you are currently loged in as <%= @current_user.email %></p>
+  <% end %>
 
-</div>
-<div class="row">
-  <div class="col-md-4 offset-md-4" >
-      <h1>first</h1>
-  </div>
 
+  <div class="row">
+    <div class="col-md-4 offset-md-4" >
+      <h5>Welcome to Book Club!</h5>
+        <h5>recently added</5>
+        <img src="images/home.jpg" >
+    </div>
+
+  </div>
 </div>

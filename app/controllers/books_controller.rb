@@ -13,8 +13,7 @@ class BooksController < ApplicationController
   # redirect_to books_path
   raise hell
   end
-
-
+  
   def index
     @book = Book.all
   end

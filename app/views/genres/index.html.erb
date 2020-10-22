@@ -1,10 +1,16 @@
-<h2>All Genres</h2>
-<% @genre.each do |g| %>
-<p>
-  <%= g.name %>
-  <span>--</span>
-  <%= link_to "delete",  method: :delete %>
-</p>
 
 
-<% end  %>
+
+<div class="class="p-3 mb-2 bg-light text-dark"">
+  <h2>All Genres</h2>
+  <% @genre.each do |g| %>
+  <p>
+    <%= g.name %>
+    <span>--</span>
+    <%= link_to "delete",  method: :delete %>
+  </p>
+
+
+  <% end  %>
+
+</div>

@@ -1,6 +1,9 @@
-<h1>Creating Genre</h1>
-<%= form_for @genre do |g| %>
-<%= g.label:name %>
-<%= g.text_field :name, :placeholder => 'Genre Name' %>
-<%= g.submit "create genre" %>
-<% end %>
+
+<div class="p-3 mb-2 bg-light text-dark">
+  <h1>Creating Genre</h1>
+  <%= form_for @genre do |g| %>
+  <%= g.label:name %>
+  <%= g.text_field :name, :placeholder => 'Genre Name' %>
+  <%= g.submit "create genre" %>
+  <% end %>
+</div>
