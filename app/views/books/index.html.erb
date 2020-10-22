@@ -1,8 +1,19 @@
 
 <div class="p-3 mb-2 bg-light text-dark">
   <h2>All Books</h2>
+
   <% @book.each do |b| %>
-  <p><%=link_to b.title  %>
+
+
+    <li>Title : <%=link_to b.title ,b  %></li>
+<div class="ssize">
+  <%= link_to image_tag(b.cover, :class=>'img-fluid img-thumbnail' , :alt => b.title) , b %>
+</div>
+
+
+
+
+
   <% end  %>
 
   <%= link_to "Add New Book" , new_book_path, :class =>"badge badge-pill badge-primary" %>
