@@ -6,5 +6,10 @@
 <%= form_for @book do |b| %>
 <%= b.label:title %>
 <%= b.text_field :title, :placeholder => 'Book Name' %>
+
+<%= b.label:Genre %>
+<%= b.select :genre_id,Genre.pluck(:name , :id),{}, :include_blank => true %>
+
+
 <%= b.submit "create book" %>
 <% end %>

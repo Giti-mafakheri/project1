@@ -6,10 +6,10 @@ class ShelvesController < ApplicationController
  def create
    shelf = Shelf.create shelf_params
    @current_user.shelves << shelf
-   redirect_to root_path
+   redirect_to shelves_path
  end
  def index
-
+  @books = Book.all
  end
  private
  def shelf_params

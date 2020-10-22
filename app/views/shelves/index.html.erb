@@ -1,4 +1,10 @@
 <h2>Your Shelves</h2>
+
+
 <% @current_user.shelves.each do |shelf| %>
 <p><%= shelf.title %></p>
+<% @books.each do |book| %>
+<p><%= book.title %></p>
+
+<% end  %>
 <% end  %>
