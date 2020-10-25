@@ -1,11 +1,22 @@
 
 <div class="p-3 mb-2 bg-light text-dark">
-  <h2>Your Shelf</h2>
+  <h2>Your Shelf1</h2>
   <% @current_user.shelves.each do |shelf| %>
-  <p><%= shelf.title %></p>
-  <% @books.each do |book| %>
-  <p><%= link_to book.title , '/books/:id/edit' %></p>
+  <p class="tshelf"><%= shelf.title %></p>
+  <% Book.all.each do |book| %>
+
+
+
+<% Book.all.each do |book| %>
+   <%= check_box_tag "shelf[book_ids][]" , book.id, @shelf.book_ids.include(book.id)  %>
+   <%= book.title  %>
+<% end %>
+
+
+
+
   <% end  %>
   <% end %>
+  </br>
   <%= link_to "Add a book to your list" ,  :class =>"badge badge-pill badge-primary" %>
 </div>

@@ -3,16 +3,10 @@
   <h2>All Books</h2>
 
   <% @book.each do |b| %>
-
-
     <li>Title : <%=link_to b.title ,b  %></li>
 <div class="ssize">
   <%= link_to image_tag(b.cover, :class=>'img-fluid img-thumbnail' , :alt => b.title) , b %>
 </div>
-
-
-
-
 
   <% end  %>
 
